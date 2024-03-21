@@ -8,3 +8,7 @@ Backend/.env
 /FE/node_modules
 /newenv
 /Backend/__pycache__
+/Backend/UploadedFiles
+*.pkl
+*.pkl
+Backend/stageOne/questions.pkl

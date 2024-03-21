@@ -47,7 +47,12 @@ def checkAndStoreFile(file):
         return f'Error: Could not save the file. {str(e)}'
 
     # Prepare data
-    questions = [spacy_tokenizer(question).text for question in df['question']]
+    column_name = "question" if "question" in df.columns else "Question" if "Question" in df.columns else None
+
+    if column_name:
+        questions = [spacy_tokenizer(question).text for question in df[column_name]]
+    else:
+        return ("Column 'question' or 'Question' not found in DataFrame")
     question_embeddings = np.array(model.encode(questions, show_progress_bar=True))
 
     # Save the embeddings

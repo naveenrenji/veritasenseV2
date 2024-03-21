@@ -31,7 +31,8 @@ def get_answer(query, model, question_embeddings, questions, df):
 
     if similarities[closest_idx] > 0.5:
         matched_question = questions[closest_idx]
-        answer = df['answer'][closest_idx]
+        answer_col = 'answer' if 'answer' in df.columns else 'Answer'
+        answer = df[answer_col][closest_idx]
         print(f"Query: {query} || Matched question: {matched_question}   navs || Answer: {answer} ||")
         return answer
     else:
