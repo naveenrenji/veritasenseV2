@@ -50,13 +50,13 @@ def checkAndStoreFile(file):
 
     # Save the embeddings
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    save_dir = os.path.join(BASE_DIR, '/stageOne')
+    save_dir = os.path.join(BASE_DIR, '/UploadedFiles')
     os.makedirs(save_dir, exist_ok=True)  # Ensure the directory exists
 
     try:
         filename_without_ext = os.path.splitext(secure_filename(file.filename))[0]
-        save_obj(questions, f'{filename_without_ext}_questionspp', save_dir)
-        save_obj(question_embeddings, f'{filename_without_ext}_embeddingspp', save_dir)
+        save_obj(questions, f'{filename_without_ext}_questions', save_dir)
+        save_obj(question_embeddings, f'{filename_without_ext}_embeddings', save_dir)
     except Exception as e:
         return f'Error: Could not save the file. {str(e)}'
 
