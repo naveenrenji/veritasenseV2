@@ -1,0 +1,10 @@
+
+Backend/.env
+/Backend/flask_session
+/Backend/models
+/Backend/stageOne/__pycache__
+/Backend/stageThree/__pycache__
+/Backend/stageTwo/__pycache__
+/FE/node_modules
+/newenv
+/Backend/__pycache__
