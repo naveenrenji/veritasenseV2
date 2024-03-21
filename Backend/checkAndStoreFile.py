@@ -50,7 +50,7 @@ def checkAndStoreFile(file):
 
     # Save the embeddings
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    save_dir = os.path.join(BASE_DIR, '/UploadedFiles')
+    save_dir = os.path.join(BASE_DIR, 'UploadedFiles')
     os.makedirs(save_dir, exist_ok=True)  # Ensure the directory exists
 
     try:
