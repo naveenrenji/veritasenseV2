@@ -3,6 +3,7 @@ warnings.filterwarnings("ignore", category=UserWarning, module="torch._utils")
 
 from stageOne.getcontext import get_answer, load_data
 # from stageTwo.dataloading import get_SSE_results, load_model_and_data
+# from stageThree.new import response_generator
 from time import time
 
 def get_bot_response(query):
@@ -22,6 +23,7 @@ def get_bot_response(query):
         response = "Sorry, I do not have the answer to that. Please ask me another question."
     else:
         # Replace this with your actual response generation logic if needed
+        # response = response_generator(query, context)
         response = "Temporary response data -- " + context
 
     # Debugging: Calculate and print the total processing time

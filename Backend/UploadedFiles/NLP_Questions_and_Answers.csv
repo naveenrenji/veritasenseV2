@@ -1,0 +1,6 @@
+question,answer
+What is Natural Language Processing (NLP)?,NLP is a field of artificial intelligence that focuses on the interaction between computers and humans through natural language.
+What are the main components of NLP?,"The main components of NLP include syntax analysis, semantic analysis, discourse integration, and pragmatic analysis."
+Can you explain the concept of Tokenization in NLP?,"Tokenization is the process of breaking down text into smaller units, such as words or phrases, for easier processing."
+What is the role of Machine Learning in NLP?,"Machine Learning is used in NLP to automatically learn and improve from experience without being explicitly programmed, particularly in tasks like translation, sentiment analysis, and topic recognition."
+What are some common applications of NLP?,"Common applications of NLP include language translation, sentiment analysis, chatbots, and voice assistants."

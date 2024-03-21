@@ -50,7 +50,8 @@ def list_files():
 @app.route('/chatbot/<filename>', methods=['GET'])
 def chatbot_api(filename):
     try:
-        result_message = chatbotChange(filename)
+        filename_without_ext, _ = os.path.splitext(filename)
+        result_message = chatbotChange(filename_without_ext)
         return jsonify({'message': result_message}), 200
     except Exception as e:
         # Handle any unexpected error

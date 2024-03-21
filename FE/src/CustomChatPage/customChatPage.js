@@ -37,9 +37,9 @@ const UploadAndListPage = () => {
       fetchFiles(); // Refresh the file list
       setIsProcessing(false); // Hide processing overlay
     } catch (error) {
-      console.error('Upload failed:', error);
+      console.error('Upload failed:', error.response.data);
       setIsProcessing(false); // Hide processing overlay in case of error
-      alert('Upload failed. Please try again.');
+      alert('Upload failed. Please try again. - '+error.response.data);
     }
   };
 

@@ -29,8 +29,10 @@ def checkAndStoreFile(file):
         return f'Error: Failed to read the file. {str(e)}'
 
     # Check if the dataframe contains exactly 2 columns named 'question' and 'answer'
-    if len(df.columns) != 2 or not all(column in df.columns for column in ['question', 'answer']):
-        return 'Error: The file must contain only 2 columns: "question" and "answer".'
+    if len(df.columns) != 2:
+        return 'Error: The file must contain only 2 columns'
+    # if not all(column in df.columns for column in ['question', 'answer', 'Question', 'Answer']):
+    #     return 'Error: The file must contain only 2 columns named: "question" and "answer".'
 
     # If checks pass, save the file
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
